@@ -1,0 +1,31 @@
+
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="{% static 'css/c1.css' %}">
+</head>
+<body>
+    <center>
+        <h1>DEPARTMENT TABLE</h1>
+        <table border="3px">
+            <tr>
+                <th id="a">dept_no</th>
+                <th id="b">dname</th>
+                <th id="c">loc</th>
+            </tr>
+        {% for de in dept %}
+        <tr>
+            <td>{{de.dept_no}}</td>
+            <td>{{de.dname}}</td>
+            <td>{{de.loc}}</td>
+        </tr>
+        {% endfor %}
+        </table>
+    </center>
+</body>
+</html>
